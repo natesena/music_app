@@ -52,30 +52,32 @@
     <% end %>
     </ul>
 <% end %>
+
+
 <script>
-        var players = document.querySelectorAll('.player')
-        players.forEach(function(player) {
-    
-            var songId = player.dataset.id
-            
-            player.wavesurfer = WaveSurfer.create({
-                container: '#song-' + songId,
-                progressColor: 'orange',
-                normalize: true
-            });
-            
-            
-            player.wavesurfer.load(player.dataset.songfile)
-            
-            player.wavesurfer.on('ready', function () {
-                document.getElementById('play-' + player.dataset.id).onclick = function(){
-                    if(player.wavesurfer.isPlaying()){
-                        player.wavesurfer.pause()
-                    }
-                    else{
-                        player.wavesurfer.play()
-                    }
+    var players = document.querySelectorAll('.player')
+    players.forEach(function(player) {
+
+        var songId = player.dataset.id
+        
+        player.wavesurfer = WaveSurfer.create({
+            container: '#song-' + songId,
+            progressColor: 'orange',
+            normalize: true
+        });
+        
+        
+        player.wavesurfer.load(player.dataset.songfile)
+        
+        player.wavesurfer.on('ready', function () {
+            document.getElementById('play-' + player.dataset.id).onclick = function(){
+                if(player.wavesurfer.isPlaying()){
+                    player.wavesurfer.pause()
                 }
-            });
-        })
-    </script>
+                else{
+                    player.wavesurfer.play()
+                }
+            }
+        });
+    })
+</script>
