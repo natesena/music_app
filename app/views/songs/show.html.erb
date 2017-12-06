@@ -1,14 +1,14 @@
-<div class="container-fluid song" style="background-image: url(<%= @song.songcovimg.url %>)">
+<div class="container-fluid song" >
     <div class="row">
         <div class="col-2">
-        <%= image_tag  @song.user.avatar.url(:thumb), size: "100x100", class: "avatar" %>
+            <%= image_tag  @song.user.avatar.url(:thumb), size: "100x100", class: "avatar" %>
         </div>
         <div class="col-6">
-        <h1><%= link_to @song.user.username, user_path(@song.user) %> - <%= link_to @song.title, song_path(@song.id) %></h1>
-        <h4>Posted <%= time_ago_in_words @song.created_at %> ago</h4>
+            <h1><%= link_to @song.user.username, user_path(@song.user) %> - <%= link_to @song.title, song_path(@song.id) %></h1>
+            <h4>Posted <%= time_ago_in_words @song.created_at %> ago</h4>
         </div>
         <div class="col">
-        <h3><%=link_to "##{@song.genre}", root_path(genre_param: @song.genre) %></h3>
+            <h3><%=link_to "##{@song.genre}", root_path(genre_param: @song.genre) %></h3>
         </div>
     </div>
     
