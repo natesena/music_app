@@ -1,4 +1,5 @@
 class CommentsController < ApplicationController
+  # run authr=orization as middleware before these specific routes
   before_action :authorize, only: [:edit, :update, :create, :destroy]
 
   def index
@@ -20,11 +21,11 @@ class CommentsController < ApplicationController
       if @comment.save
         redirect_to song_path(@song)
       else
-        flash[:danger] = "comment could not be saved"
+        flash[:danger] = "Comment could not be saved"
         redirect_to song_path
       end
     else 
-      flash[:danger] = "must be logged in to do that"
+      flash[:danger] = "Must be logged in to do that"
       redirect_to new_session_path  
     end
   end

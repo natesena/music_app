@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Music App</title>
+    <title>Free.ly</title>
     <%= csrf_meta_tags %>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wavesurfer.js/1.4.0/wavesurfer.min.js"></script>
@@ -12,7 +12,7 @@
 
   <body>
       <%= render 'layouts/partials/navbar' %>
-     <!-- #d danger, m message -->
+     <!-- For each mesage flash it in danger red theme -->
      <% flash.each do |d, m| %>
       <div class="alert alert-<%= d%>">
         <%= m %>
