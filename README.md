@@ -1,4 +1,6 @@
 ### Welcome to the Freely ReadMe!
+#### [Try Free.ly Here](http://cryptic-crag-81851.herokuapp.com/)
+
 ![Welcome Screen](https://i.imgur.com/YEdLsHJ.png)
 
 Freely was designed to be a Soundcloud replica using Ruby on Rails and WaveSurfer.js.
