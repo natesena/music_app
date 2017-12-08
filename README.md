@@ -1,4 +1,5 @@
 ### Welcome to the Freely ReadMe!
+![Welcome Screen](https://i.imgur.com/YEdLsHJ.png)
 
 Freely was designed to be a Soundcloud replica using Ruby on Rails and WaveSurfer.js.
 
@@ -21,6 +22,7 @@ Make sure you have Ruby on Rails and then clone the repository down.
 Ideally, you should have a database system like PostgreSQL as well.
 
 #### Overview
+![Song](https://i.imgur.com/ufB7O4A.png)
 
 The app features  three separate models: users, songs and comments.  Users can have many songs, and each song can have many comments.
 
